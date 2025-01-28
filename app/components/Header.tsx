@@ -5,6 +5,7 @@ export const Header = () => {
     <header>
       <nav className={'min-h-[65px] bg-blue-950 flex items-center justify-between px-[1.5rem]'}>
         <Image
+          priority
           src="/logo.svg"
           alt="Logo"
           width={120}

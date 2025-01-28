@@ -2,7 +2,7 @@
 
 import React from 'react';
 
-const Loading = () => {
+const LoadingSkeleton = () => {
     return (
         <div className="page-container grid grid-cols-1 lg:grid-cols-5 gap-5 lg:gap-0">
             <div
@@ -64,4 +64,4 @@ const Loading = () => {
     );
 };
 
-export default Loading;
+export default LoadingSkeleton;

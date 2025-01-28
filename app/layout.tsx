@@ -1,9 +1,10 @@
 
-import type { ReactNode } from "react";
+import { Suspense, type ReactNode } from "react";
 import { StoreProvider } from "./StoreProvider";
 import { Header } from "./components/Header";
 import { Metadata } from "next";
 import "./styles/globals.css";
+import LoadingSkeleton from "./components/LoadingSkeleton";
 
 interface Props {
   readonly children: ReactNode;
@@ -19,7 +20,9 @@ export default function RootLayout({ children }: Props) {
       <html lang="en">
         <body className={'w-screen overflow-x-hidden'}>
           <Header />
-          <main>{children}</main>
+          <Suspense fallback={<LoadingSkeleton />}>
+            <main>{children}</main>
+          </Suspense>
         </body>
       </html>
     </StoreProvider>

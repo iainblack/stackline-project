@@ -12,7 +12,7 @@ const ProductOverviewPanel = (props: ProductOverviewPanelProps) => {
     return (
         <div className='paper'>
             <div className='flex flex-col items-center gap-5'>
-                <Image src={product.image} alt={product.title} width={150} height={150} />
+                <Image src={product.image} alt={product.title} width={150} height={150} priority />
                 <div className='flex flex-col gap-2 text-center w-full'>
                     <h1 className='text-xl'>{product.title}</h1>
                     <h2 className='text-xs text-gray-400'>{product.subtitle}</h2>
